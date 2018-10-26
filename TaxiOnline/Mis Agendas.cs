@@ -40,5 +40,10 @@ namespace TaxiOnline
         {
 
         }
+
+        private void btnBorrarAgenda_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

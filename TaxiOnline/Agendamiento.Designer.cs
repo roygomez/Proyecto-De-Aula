@@ -77,7 +77,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 130);
+            this.label4.Location = new System.Drawing.Point(38, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 3;
@@ -96,11 +96,13 @@
             // 
             this.cmbDestino.FormattingEnabled = true;
             this.cmbDestino.Items.AddRange(new object[] {
-            "Armenia",
             "Barranquilla",
-            "Bogota",
-            "Cali",
-            "Cartagena"});
+            "Carmen De Bolivar",
+            "Cordoba",
+            "Monteria",
+            "La Guajira",
+            "Santa Marta",
+            "Sincelejo"});
             this.cmbDestino.Location = new System.Drawing.Point(188, 130);
             this.cmbDestino.Name = "cmbDestino";
             this.cmbDestino.Size = new System.Drawing.Size(200, 21);
@@ -123,6 +125,7 @@
             this.txtHoraViaje.Name = "txtHoraViaje";
             this.txtHoraViaje.Size = new System.Drawing.Size(200, 20);
             this.txtHoraViaje.TabIndex = 7;
+            this.txtHoraViaje.TextChanged += new System.EventHandler(this.txtHoraViaje_TextChanged);
             // 
             // txtOcupantes
             // 

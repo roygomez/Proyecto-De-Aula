@@ -37,11 +37,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(184, 33);
+            this.label1.Location = new System.Drawing.Point(177, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 13);
+            this.label1.Size = new System.Drawing.Size(164, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese Numero de Cedula:";
+            this.label1.Text = "Ingrese Numero de Cedula o Nit :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtValidacion
             // 

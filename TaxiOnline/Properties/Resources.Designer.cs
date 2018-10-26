@@ -69,5 +69,25 @@ namespace TaxiOnline.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1766caff_ffd4_4828_af4c_1ebd41d7bace1 {
+            get {
+                object obj = ResourceManager.GetObject("1766caff-ffd4-4828-af4c-1ebd41d7bace1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b8781c09_36fc_4cee_9f42_d45b742f41b0 {
+            get {
+                object obj = ResourceManager.GetObject("b8781c09-36fc-4cee-9f42-d45b742f41b0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

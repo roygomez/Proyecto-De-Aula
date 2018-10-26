@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnIngresarEmp = new System.Windows.Forms.Button();
             this.btnRecuperarUsuario = new System.Windows.Forms.Button();
             this.bntClear = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -89,11 +90,13 @@
             this.txtUsuarioAdmin = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -113,6 +116,7 @@
             this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.btnIngresarEmp);
             this.tabPage1.Controls.Add(this.btnRecuperarUsuario);
             this.tabPage1.Controls.Add(this.bntClear);
             this.tabPage1.Controls.Add(this.btnIngresar);
@@ -129,9 +133,19 @@
             this.tabPage1.Text = "Iniciar sesion";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // btnIngresarEmp
+            // 
+            this.btnIngresarEmp.Location = new System.Drawing.Point(426, 173);
+            this.btnIngresarEmp.Name = "btnIngresarEmp";
+            this.btnIngresarEmp.Size = new System.Drawing.Size(110, 23);
+            this.btnIngresarEmp.TabIndex = 6;
+            this.btnIngresarEmp.Text = "Sesion Empresa";
+            this.btnIngresarEmp.UseVisualStyleBackColor = true;
+            this.btnIngresarEmp.Click += new System.EventHandler(this.btnIngresarEmp_Click);
+            // 
             // btnRecuperarUsuario
             // 
-            this.btnRecuperarUsuario.Location = new System.Drawing.Point(294, 237);
+            this.btnRecuperarUsuario.Location = new System.Drawing.Point(273, 221);
             this.btnRecuperarUsuario.Name = "btnRecuperarUsuario";
             this.btnRecuperarUsuario.Size = new System.Drawing.Size(209, 23);
             this.btnRecuperarUsuario.TabIndex = 5;
@@ -141,7 +155,7 @@
             // 
             // bntClear
             // 
-            this.bntClear.Location = new System.Drawing.Point(294, 172);
+            this.bntClear.Location = new System.Drawing.Point(229, 173);
             this.bntClear.Name = "bntClear";
             this.bntClear.Size = new System.Drawing.Size(75, 23);
             this.bntClear.TabIndex = 4;
@@ -151,27 +165,27 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(428, 172);
+            this.btnIngresar.Location = new System.Drawing.Point(310, 173);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(75, 23);
+            this.btnIngresar.Size = new System.Drawing.Size(110, 23);
             this.btnIngresar.TabIndex = 3;
-            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.Text = "Sesion Persona";
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(294, 134);
+            this.txtContraseña.Location = new System.Drawing.Point(229, 135);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '+';
-            this.txtContraseña.Size = new System.Drawing.Size(209, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(307, 20);
             this.txtContraseña.TabIndex = 2;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(294, 78);
+            this.txtUsuario.Location = new System.Drawing.Point(229, 79);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(209, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(307, 20);
             this.txtUsuario.TabIndex = 0;
             // 
             // label17
@@ -179,7 +193,7 @@
             this.label17.AutoSize = true;
             this.label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(156, 134);
+            this.label17.Location = new System.Drawing.Point(91, 135);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(91, 20);
             this.label17.TabIndex = 1;
@@ -190,7 +204,7 @@
             this.label16.AutoSize = true;
             this.label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(156, 78);
+            this.label16.Location = new System.Drawing.Point(91, 79);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(66, 20);
             this.label16.TabIndex = 0;
@@ -464,6 +478,7 @@
             this.tabPage3.Controls.Add(this.btnLimpiarEmp);
             this.tabPage3.Controls.Add(this.txtCiudadEmp);
             this.tabPage3.Controls.Add(this.btnRegistrarEmp);
+            this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -601,6 +616,7 @@
             this.btnLimpiarEmp.TabIndex = 36;
             this.btnLimpiarEmp.Text = "Limpiar";
             this.btnLimpiarEmp.UseVisualStyleBackColor = true;
+            this.btnLimpiarEmp.Click += new System.EventHandler(this.btnLimpiarEmp_Click);
             // 
             // txtCiudadEmp
             // 
@@ -617,6 +633,7 @@
             this.btnRegistrarEmp.TabIndex = 35;
             this.btnRegistrarEmp.Text = "Registrar";
             this.btnRegistrarEmp.UseVisualStyleBackColor = true;
+            this.btnRegistrarEmp.Click += new System.EventHandler(this.btnRegistrarEmp_Click);
             // 
             // tabPage4
             // 
@@ -641,6 +658,7 @@
             this.btnInicioSesionAdmin.TabIndex = 7;
             this.btnInicioSesionAdmin.Text = "Iniciar Sesion";
             this.btnInicioSesionAdmin.UseVisualStyleBackColor = true;
+            this.btnInicioSesionAdmin.Click += new System.EventHandler(this.btnInicioSesionAdmin_Click);
             // 
             // btnLimpiarAdmin
             // 
@@ -685,6 +703,16 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "Administrador:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TaxiOnline.Properties.Resources.b8781c09_36fc_4cee_9f42_d45b742f41b0;
+            this.pictureBox1.Location = new System.Drawing.Point(41, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(683, 452);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.TabStop = false;
+            // 
             // Principal
             // 
             this.AcceptButton = this.btnIngresar;
@@ -705,6 +733,7 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -772,6 +801,8 @@
         private System.Windows.Forms.Button btnInicioSesionAdmin;
         private System.Windows.Forms.Button btnRecuperarUsuario;
         private System.Windows.Forms.DateTimePicker txtNacimiento;
+        private System.Windows.Forms.Button btnIngresarEmp;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

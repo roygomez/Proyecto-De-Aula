@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxiOnline.Clases;
 using TaxiOnline.DbClases;
+using TaxiOnline.ModeloDB;
 
 namespace TaxiOnline
 {
@@ -42,6 +43,8 @@ namespace TaxiOnline
             txtResidencia.Clear();
             txtCiudad.Clear();
             txtCorreo.Clear();
+            txtUsuarioPersonal.Clear();
+            txtContraseñaPersonal.Clear();
             btnmasculino.Checked = false;
             btnfemenino.Checked = false;
 
@@ -92,27 +95,10 @@ namespace TaxiOnline
             {
                 MessageBox.Show(ex.Message);
             }
+
+           
         }
 
-        
-
-        // Boton deLogin administrador
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (txtUsuarioAdmin.Text == "Admin" && txtContraseñaAdmin.Text == "Admin")
-            {
-                DatosDeUsuarios datosUsu = new DatosDeUsuarios();
-                this.Hide();
-                datosUsu.ShowDialog();
-                this.Show();
-
-            }
-            else
-            {
-                MessageBox.Show("Usuario y/o Clave Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            }
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -153,6 +139,19 @@ namespace TaxiOnline
 
                 MessageBox.Show(ex.Message);
             }
+
+            txtNombre.Clear();
+            txtApellidos.Clear();
+            txtCc.Clear();
+            txtCiudad.Clear();
+            txtCorreo.Clear();
+            txtTelefono.Clear();
+            txtResidencia.Clear();
+            txtCiudad.Clear();
+            txtCorreo.Clear();
+            btnmasculino.Checked = false;
+            btnfemenino.Checked = false;
+
         }
 
         private void btnmasculino_CheckedChanged(object sender, EventArgs e)
@@ -179,6 +178,110 @@ namespace TaxiOnline
         {
             txtContraseñaAdmin.Clear();
             txtUsuarioAdmin.Clear();
+        }
+
+
+        //Boton Registrar Empresa
+        private void btnRegistrarEmp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Empresa E1 = new Empresa();
+                E1.Nombre_Empresa1 = txtEmpresa.Text;
+                E1.Nit1 = txtNit.Text;
+                E1.Direccion_Emp1 = txtDireccionEmp.Text;
+                E1.Telefono_Emp1 = txtTelefonoEmp.Text;
+                E1.Ciudad_Emp1 = txtCiudadEmp.Text;
+                E1.Usuario_Emp1 = txtUsuarioEmp.Text;
+                E1.Contraseña_Emp1 = txtContraseñaEmp.Text;
+                E1.Correo_Emp1 = txtCorreoEmp.Text;
+
+                int resultado = DbEmpresa.AgregarEmp(E1);
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Empresa Agregada con exito");
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error al agregar la empresa");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            txtEmpresa.Clear();
+            txtNit.Clear();
+            txtDireccionEmp.Clear();
+            txtTelefonoEmp.Clear();
+            txtCorreoEmp.Clear();
+            txtCiudadEmp.Clear();
+            txtUsuarioEmp.Clear();
+            txtContraseñaEmp.Clear();
+
+        }
+
+        //Boton Limpiar los textBox De Registro De Empresas
+        private void btnLimpiarEmp_Click(object sender, EventArgs e)
+        {
+            txtEmpresa.Clear();
+            txtNit.Clear();
+            txtDireccionEmp.Clear();
+            txtTelefonoEmp.Clear();
+            txtCorreoEmp.Clear();
+            txtCiudadEmp.Clear();
+            txtUsuarioEmp.Clear();
+            txtContraseñaEmp.Clear();
+        }
+
+        private void btnIngresarEmp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM datosempresa WHERE usuario='" + txtUsuario.Text + "' AND contraseña='" + txtContraseña.Text + "'", DbConexion.ObtenerConexion());
+                MySqlDataReader leer = comando.ExecuteReader();
+
+                if (leer.Read())
+                {
+                    txtUsuario.Clear();
+                    txtContraseña.Clear();
+
+                    Agendamiento AgendUsu = new Agendamiento();
+                    AgendUsu.id_persona = leer.GetInt32("id");
+                    AgendUsu.lblid_persona.Text = AgendUsu.id_persona.ToString();
+                    this.Hide();
+                    AgendUsu.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o Clave Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        // Boton Inicio De Sesion administrador
+        private void btnInicioSesionAdmin_Click(object sender, EventArgs e)
+        {
+            if (txtUsuarioAdmin.Text == "Admin" && txtContraseñaAdmin.Text == "Admin")
+            {
+                DatosDeUsuarios datosUsu = new DatosDeUsuarios();
+                this.Hide();
+                datosUsu.ShowDialog();
+                this.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Usuario y/o Clave Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
         }
     }
 }

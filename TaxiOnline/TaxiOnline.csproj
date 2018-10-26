@@ -53,6 +53,7 @@
       <DependentUpon>Agendamiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Agendamiento.cs" />
+    <Compile Include="Clases\Empresa.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="DatosDeUsuarios.cs">
       <SubType>Form</SubType>
@@ -62,6 +63,7 @@
     </Compile>
     <Compile Include="ModeloDB\DbAgendamiento.cs" />
     <Compile Include="ModeloDB\DbConexion.cs" />
+    <Compile Include="ModeloDB\DbEmpresa.cs" />
     <Compile Include="ModeloDB\DbPersona.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -124,6 +126,11 @@
   <ItemGroup>
     <None Include="Resources\1766caff-ffd4-4828-af4c-1ebd41d7bace.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\b8781c09-36fc-4cee-9f42-d45b742f41b0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1766caff-ffd4-4828-af4c-1ebd41d7bace1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

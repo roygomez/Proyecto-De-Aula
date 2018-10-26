@@ -54,7 +54,11 @@ namespace TaxiOnline
 
                 MessageBox.Show(ex.Message);
             }
-            
+
+            txtHoraViaje.Clear();
+            txtOcupantes.Clear();
+            cmbDestino.Text = "Seleccione";
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -64,7 +68,7 @@ namespace TaxiOnline
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -72,7 +76,7 @@ namespace TaxiOnline
             txtHoraViaje.Clear();
             txtOcupantes.Clear();
             cmbDestino.Text = "Seleccione";
-
+            
         }
 
         private void Agendamiento_Load(object sender, EventArgs e)
@@ -86,7 +90,7 @@ namespace TaxiOnline
             Agendas.id_persona = lblid_persona.Text;
             
             Agendas.dataGridView1.DataSource = DbAgendamiento.BuscarReservas(Agendas.id_persona);
-            Agendas.dataGridView1.Columns["id"].Visible = false;
+            Agendas.dataGridView1.Columns["id"].Visible = true;
             Agendas.dataGridView1.Columns["id_persona"].Visible = false;
             this.Hide();
             Agendas.ShowDialog();
@@ -96,6 +100,11 @@ namespace TaxiOnline
         private void btnCerrarSesionUsu_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtHoraViaje_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -42,7 +42,7 @@ namespace TaxiOnline
                     string servidor = "smtp.gmail.com";
                     MailMessage mensaje = new MailMessage
                         (
-                            "estevenjaviier@gmail.com", //Correo de donde se enviara
+                            "caribetransporte11@gmail.com", //Correo de donde se enviara
                             _reader.GetString("correo_electronico"), //Correo a quien se le va a enviar
                             "Recuperacion de contraseña", //Asusnto del correo
                             "Estimado usuario (" + _reader.GetString("nombre") +" "+ _reader.GetString("apellidos") + "),\n\nSu usuario es: " + _reader.GetString("usuario") + " \n" +
@@ -73,6 +73,11 @@ namespace TaxiOnline
                 MessageBox.Show(ex.Message);
             }
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

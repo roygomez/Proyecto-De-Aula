@@ -15,7 +15,7 @@ namespace TaxiOnline.ModeloDB
         {
             int Retorno = 0;
 
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT into agendapersonal (ciudad_Destino, hora_viaje, numero_ocupantes, fecha_viaje, id_persona) values ('{0}','{1}','{2}', '{3}', '{4}')",
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT into agendamientopersonal (ciudad_Destino, hora_viaje, numero_ocupantes, fecha_viaje, id_persona) values ('{0}','{1}','{2}', '{3}', '{4}')",
                 A1.Ciudad_Destino,A1.Hora_viaje,A1.Numero_ocupantes,A1.Fecha_viaje,A1.Id_persona), DbConexion.ObtenerConexion());
 
             Retorno = comando.ExecuteNonQuery();
@@ -27,7 +27,7 @@ namespace TaxiOnline.ModeloDB
         {
             List<Clases.Agendamiento> _lista = new List<Clases.Agendamiento>();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM agendapersonal WHERE id_persona='"+id_persona+"'"), DbConexion.ObtenerConexion());
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM agendamientopersonal WHERE id_persona='"+id_persona+"'"), DbConexion.ObtenerConexion());
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
