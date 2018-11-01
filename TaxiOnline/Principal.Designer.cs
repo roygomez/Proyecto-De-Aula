@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnIngresarEmp = new System.Windows.Forms.Button();
@@ -90,25 +91,32 @@
             this.txtUsuarioAdmin = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabControl1.ItemSize = new System.Drawing.Size(73, 21);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(738, 644);
+            this.tabControl1.Size = new System.Drawing.Size(658, 648);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -124,18 +132,19 @@
             this.tabPage1.Controls.Add(this.txtUsuario);
             this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.ForeColor = System.Drawing.Color.Black;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(730, 618);
+            this.tabPage1.Size = new System.Drawing.Size(650, 619);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Iniciar sesion";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btnIngresarEmp
             // 
-            this.btnIngresarEmp.Location = new System.Drawing.Point(426, 173);
+            this.btnIngresarEmp.Location = new System.Drawing.Point(404, 214);
             this.btnIngresarEmp.Name = "btnIngresarEmp";
             this.btnIngresarEmp.Size = new System.Drawing.Size(110, 23);
             this.btnIngresarEmp.TabIndex = 6;
@@ -145,7 +154,7 @@
             // 
             // btnRecuperarUsuario
             // 
-            this.btnRecuperarUsuario.Location = new System.Drawing.Point(273, 221);
+            this.btnRecuperarUsuario.Location = new System.Drawing.Point(251, 262);
             this.btnRecuperarUsuario.Name = "btnRecuperarUsuario";
             this.btnRecuperarUsuario.Size = new System.Drawing.Size(209, 23);
             this.btnRecuperarUsuario.TabIndex = 5;
@@ -155,7 +164,7 @@
             // 
             // bntClear
             // 
-            this.bntClear.Location = new System.Drawing.Point(229, 173);
+            this.bntClear.Location = new System.Drawing.Point(207, 214);
             this.bntClear.Name = "bntClear";
             this.bntClear.Size = new System.Drawing.Size(75, 23);
             this.bntClear.TabIndex = 4;
@@ -165,7 +174,7 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(310, 173);
+            this.btnIngresar.Location = new System.Drawing.Point(288, 214);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(110, 23);
             this.btnIngresar.TabIndex = 3;
@@ -175,7 +184,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(229, 135);
+            this.txtContraseña.Location = new System.Drawing.Point(207, 176);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '+';
             this.txtContraseña.Size = new System.Drawing.Size(307, 20);
@@ -183,7 +192,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(229, 79);
+            this.txtUsuario.Location = new System.Drawing.Point(207, 120);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(307, 20);
             this.txtUsuario.TabIndex = 0;
@@ -191,22 +200,20 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(91, 135);
+            this.label17.Location = new System.Drawing.Point(99, 176);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(91, 20);
+            this.label17.Size = new System.Drawing.Size(89, 18);
             this.label17.TabIndex = 1;
             this.label17.Text = "Contraseña:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(91, 79);
+            this.label16.Location = new System.Drawing.Point(96, 120);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 20);
+            this.label16.Size = new System.Drawing.Size(64, 18);
             this.label16.TabIndex = 0;
             this.label16.Text = "Usuario:";
             // 
@@ -238,10 +245,12 @@
             this.tabPage2.Controls.Add(this.txtCorreo);
             this.tabPage2.Controls.Add(this.btnfemenino);
             this.tabPage2.Controls.Add(this.btnmasculino);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Controls.Add(this.pictureBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(730, 618);
+            this.tabPage2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tabPage2.Size = new System.Drawing.Size(650, 619);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registro Personal";
             // 
@@ -270,6 +279,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(115, 538);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
@@ -279,6 +289,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.Location = new System.Drawing.Point(115, 494);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
@@ -308,6 +319,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label15.Location = new System.Drawing.Point(115, 435);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(34, 13);
@@ -326,6 +338,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label14.Location = new System.Drawing.Point(115, 389);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(94, 13);
@@ -342,6 +355,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label13.Location = new System.Drawing.Point(115, 347);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(114, 13);
@@ -358,6 +372,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label12.Location = new System.Drawing.Point(115, 308);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(171, 13);
@@ -374,6 +389,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Location = new System.Drawing.Point(115, 265);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 13);
@@ -383,6 +399,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label10.Location = new System.Drawing.Point(115, 222);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(111, 13);
@@ -399,6 +416,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label9.Location = new System.Drawing.Point(115, 167);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(24, 13);
@@ -415,6 +433,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.Window;
             this.label8.Location = new System.Drawing.Point(115, 123);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
@@ -478,11 +497,11 @@
             this.tabPage3.Controls.Add(this.btnLimpiarEmp);
             this.tabPage3.Controls.Add(this.txtCiudadEmp);
             this.tabPage3.Controls.Add(this.btnRegistrarEmp);
-            this.tabPage3.Controls.Add(this.pictureBox1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Controls.Add(this.pictureBox3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(730, 618);
+            this.tabPage3.Size = new System.Drawing.Size(650, 619);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Registro Empresarial";
             // 
@@ -637,15 +656,18 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage4.BackgroundImage")));
+            this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage4.Controls.Add(this.btnInicioSesionAdmin);
             this.tabPage4.Controls.Add(this.btnLimpiarAdmin);
             this.tabPage4.Controls.Add(this.txtContraseñaAdmin);
             this.tabPage4.Controls.Add(this.txtUsuarioAdmin);
             this.tabPage4.Controls.Add(this.label23);
             this.tabPage4.Controls.Add(this.label22);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(730, 618);
+            this.tabPage4.Size = new System.Drawing.Size(650, 619);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Administrador";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -703,22 +725,46 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "Administrador:";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(645, 618);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TaxiOnline.Properties.Resources.b8781c09_36fc_4cee_9f42_d45b742f41b0;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 25);
+            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(683, 452);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.Size = new System.Drawing.Size(644, 613);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 44;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(644, 613);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 50;
+            this.pictureBox3.TabStop = false;
             // 
             // Principal
             // 
             this.AcceptButton = this.btnIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 749);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(674, 664);
             this.Controls.Add(this.tabControl1);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -733,7 +779,9 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -802,7 +850,9 @@
         private System.Windows.Forms.Button btnRecuperarUsuario;
         private System.Windows.Forms.DateTimePicker txtNacimiento;
         private System.Windows.Forms.Button btnIngresarEmp;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

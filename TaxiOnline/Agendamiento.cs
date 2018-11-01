@@ -25,6 +25,8 @@ namespace TaxiOnline
 
         }
 
+
+        //Boton AGENDAR Reservas
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -71,6 +73,7 @@ namespace TaxiOnline
             
         }
 
+        // Boton LIMPIAR Datos Ventana de Agendamiento
         private void button2_Click(object sender, EventArgs e)
         {
             txtHoraViaje.Clear();
@@ -84,6 +87,8 @@ namespace TaxiOnline
 
         }
 
+
+        // Boton Mostrar EL NUMERO DE AGENDAS DE UN USUSRIO
         private void btnMisAgendas_Click(object sender, EventArgs e)
         {
             Mis_Agendas Agendas = new Mis_Agendas();
@@ -97,6 +102,8 @@ namespace TaxiOnline
             this.Show();
         }
 
+
+        //Boton CERRAR SESION Usuarios
         private void btnCerrarSesionUsu_Click(object sender, EventArgs e)
         {
             this.Close();

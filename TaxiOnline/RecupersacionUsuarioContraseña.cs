@@ -25,12 +25,14 @@ namespace TaxiOnline
 
         }
 
+        // Boton VOLVER De La Ventana Recuperar Contraseña
         private void button2_Click(object sender, EventArgs e)
         {
  
             this.Close();
         }
 
+        // BotonEnviar Para recuperar contraseña y/o Usuario
         private void btnEnviarCorreo_Click(object sender, EventArgs e)
         {
             try
@@ -53,7 +55,7 @@ namespace TaxiOnline
                     SmtpClient cliente = new SmtpClient(servidor);
 
                     cliente.UseDefaultCredentials = false;
-                    cliente.Credentials = new System.Net.NetworkCredential("estevenjaviier@gmail.com", "estiven01");
+                    cliente.Credentials = new System.Net.NetworkCredential("caribetransporte11@gmail.com", "proyectodeaula");
                     cliente.Port = 587;
                     cliente.Host = "smtp.gmail.com";
                     cliente.EnableSsl = true;
@@ -76,6 +78,11 @@ namespace TaxiOnline
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtValidacion_TextChanged(object sender, EventArgs e)
         {
 
         }

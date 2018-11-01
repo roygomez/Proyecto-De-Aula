@@ -23,9 +23,8 @@ namespace TaxiOnline
             InitializeComponent();
         }
 
-        
-        
 
+        // Boton LIMPIAR CAMPOS de La Ventana Principal
         private void bntClear_Click(object sender, EventArgs e)
         {
             txtUsuarioPersonal.Clear();
@@ -66,7 +65,7 @@ namespace TaxiOnline
 
         }
 
-        // Boton para ingreso de usuario
+        // Boton INICIO SESION PERSONA
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             try
@@ -164,7 +163,7 @@ namespace TaxiOnline
             sexo = "femenino";
         }
 
-        // boton para la ventana recuperacion de usuario
+        // boton para la ventana RECUPERAR USUARIO Y/O CONTRASEÑA
         private void btnRecuperarUsuario_Click(object sender, EventArgs e)
         {
             RecupersacionUsuarioContraseña r1 = new RecupersacionUsuarioContraseña();
@@ -236,6 +235,8 @@ namespace TaxiOnline
             txtContraseñaEmp.Clear();
         }
 
+
+        // Boton INICIO SESION EMPRESA
         private void btnIngresarEmp_Click(object sender, EventArgs e)
         {
             try

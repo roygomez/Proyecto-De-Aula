@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TaxiOnline.ModeloDB;
 
 namespace TaxiOnline
 {
@@ -15,8 +16,10 @@ namespace TaxiOnline
         public DatosDeUsuarios()
         {
             InitializeComponent();
+            dgvDatosUsuarios.DataSource = DbAgendamiento.BuscarReservas();
         }
 
+        // Boton BUSCAR PERSONA
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -27,9 +30,17 @@ namespace TaxiOnline
 
         }
 
+        // Boton CERRAR SESION ADMINISTRADOR
         private void btnCerrarSesionAdmin_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+        //Boton BUSCAR EMPRESA
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

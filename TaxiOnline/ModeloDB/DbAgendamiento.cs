@@ -45,5 +45,27 @@ namespace TaxiOnline.ModeloDB
             return _lista;
         }
 
+        public static List<Clases.Agendamiento> BuscarReservas()
+        {
+            List<Clases.Agendamiento> _lista = new List<Clases.Agendamiento>();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM agendamientopersonal"), DbConexion.ObtenerConexion());
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                Clases.Agendamiento A1 = new Clases.Agendamiento();
+                A1.Id = _reader.GetInt32(0);
+                A1.Fecha_viaje = _reader.GetString("fecha_viaje");
+                A1.Hora_viaje = _reader.GetString("hora_viaje");
+                A1.Numero_ocupantes = _reader.GetString("numero_ocupantes");
+                A1.Ciudad_Destino = _reader.GetString("ciudad_Destino");
+
+
+                _lista.Add(A1);
+            }
+
+            return _lista;
+        }
+
     }
 }

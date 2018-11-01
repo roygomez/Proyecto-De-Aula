@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxiOnline.ModeloDB;
+using MySql.Data.MySqlClient;
 
 namespace TaxiOnline
 {
@@ -19,7 +20,8 @@ namespace TaxiOnline
         {
             InitializeComponent();
         }
-        
+
+        BaseDeDatos bd = new BaseDeDatos();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -30,12 +32,7 @@ namespace TaxiOnline
         {
             dataGridView1.DataSource = DbAgendamiento.BuscarReservas(id_persona);
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        
         private void Mis_Agendas_Load(object sender, EventArgs e)
         {
 
@@ -43,7 +40,17 @@ namespace TaxiOnline
 
         private void btnBorrarAgenda_Click(object sender, EventArgs e)
         {
-            
+            string CancelarAgenda = "delete from agendamientopersonal where id=" + txtIdAgendas.Text;
+
+            if (bd.executecommand(CancelarAgenda))
+            {
+                MessageBox.Show(" Agenda Cancelada");
+                dataGridView1.DataSource = bd.SelectDataTable("select * from agendamientopersonal where id_persona='"+ id_persona + "'");
+            }
+            else
+            {
+                MessageBox.Show("No Se Pudo Cancelar Agenda");
+            }
         }
     }
 }
